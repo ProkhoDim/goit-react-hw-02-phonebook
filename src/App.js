@@ -16,10 +16,10 @@ class App extends Component {
     filter: '',
   };
 
-  handleContactFormSubmit = (data) => {
+  handleContactFormSubmit = data => {
     const { name, number, id } = data;
     const { contacts } = this.state;
-    const isNameInContacts = contacts.some((contact) => name === contact.name);
+    const isNameInContacts = contacts.some(contact => name === contact.name);
 
     if (isNameInContacts) {
       alert(`${name} is already in contacts`);
@@ -31,7 +31,7 @@ class App extends Component {
     }));
   };
 
-  deleteContact = (deleteId) => {
+  deleteContact = deleteId => {
     this.setState(({ contacts }) => {
       return {
         contacts: contacts.filter(({ id }) => id !== deleteId),
@@ -39,7 +39,7 @@ class App extends Component {
     });
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.currentTarget.name]: e.currentTarget.value });
   };
 

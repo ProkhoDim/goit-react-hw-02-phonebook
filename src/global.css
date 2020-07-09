@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  padding-left: 30px;
+  font-family: Tahoma, sans-serif;
+}
+
+h2 {
+  padding-top: 20px;
+  margin-bottom: 10px;
+}

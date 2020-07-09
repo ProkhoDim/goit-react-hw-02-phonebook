@@ -1,0 +1,30 @@
+.contactForm {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formInput {
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+.formBtn {
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px 30px;
+  text-transform: capitalize;
+}
+
+.formBtn:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}

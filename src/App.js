@@ -16,8 +16,7 @@ class App extends Component {
     filter: '',
   };
 
-  handleContactFormSubmit = data => {
-    const { name, number, id } = data;
+  handleContactFormSubmit = ({ name, number, id }) => {
     const { contacts } = this.state;
     const isNameInContacts = contacts.some(contact => name === contact.name);
 
@@ -32,11 +31,9 @@ class App extends Component {
   };
 
   deleteContact = deleteId => {
-    this.setState(({ contacts }) => {
-      return {
-        contacts: contacts.filter(({ id }) => id !== deleteId),
-      };
-    });
+    this.setState(({ contacts }) => ({
+      contacts: contacts.filter(({ id }) => id !== deleteId),
+    }));
   };
 
   handleChange = e => {

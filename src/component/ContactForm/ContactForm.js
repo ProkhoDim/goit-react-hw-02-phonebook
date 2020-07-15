@@ -8,17 +8,17 @@ class ContactForm extends Component {
     number: '',
   };
 
-  contactId = uuidv4();
+  contactId = uuidv4;
   nameInputId = uuidv4();
   numberInputId = uuidv4();
 
-  addContactClick = (e) => {
+  addContactClick = e => {
     e.preventDefault();
-    this.props.onSubmit({ ...this.state, id: this.contactId });
+    this.props.onSubmit({ ...this.state, id: this.contactId() });
     this.formReset();
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.currentTarget.name]: e.currentTarget.value });
   };
 

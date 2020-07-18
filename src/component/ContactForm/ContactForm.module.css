@@ -6,7 +6,8 @@
 }
 
 .formLabel {
-  display: block;
+  display: flex;
+  flex-flow: column wrap;
   margin-bottom: 10px;
 }
 

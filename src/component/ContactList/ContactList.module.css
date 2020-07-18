@@ -18,11 +18,11 @@
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid rgb(122, 122, 122);
+  outline: none;
 }
 
 .deleteBtn:hover {
   cursor: pointer;
   background-color: red;
   color: white;
-  font-size: 1.2em;
 }

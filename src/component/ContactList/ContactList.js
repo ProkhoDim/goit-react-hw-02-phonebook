@@ -2,14 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactList.module.css';
 
-const ContactList = ({ filter, contacts, onDeleteContact }) => {
-  const normilizedFilter = filter.toLowerCase();
-  const contactsList = contacts.filter(({ name }) =>
-    name.toLowerCase().includes(normilizedFilter),
-  );
+const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul className={styles.contactList}>
-      {contactsList.map(({ name, id, number }) => (
+      {contacts.map(({ name, id, number }) => (
         <li key={id} className={styles.contactItem}>
           {name}: <span className={styles.contactText}>{number}</span>
           <button
